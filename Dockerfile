@@ -35,8 +35,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libpng-dev \
     libonig-dev \
     libxml2-dev \
+    libpq-dev \
     libzip-dev \
-    && docker-php-ext-install pdo_mysql mbstring bcmath exif pcntl gd zip \
+    && docker-php-ext-install pdo_mysql pdo_pgsql mbstring bcmath exif pcntl gd zip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
